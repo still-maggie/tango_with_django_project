@@ -9,8 +9,8 @@
     <body>
         <h1>Rango says...</h1>
         <div>
-            hey there partner! <br />
-             <strong>{{ boldmessage }}</strong> <br/>
+            hey there partner!<br />
+             <strong>{{ boldmessage }}</strong>
         </div>
 
         <div>
@@ -18,10 +18,12 @@
         {% if categories %}
             <ul>
             {% for category in categories %}
+        
                 <li><a href="/rango/category/{{ category.slug }}/">{{ category.name }}</a></li>
             {% endfor %}
             <ul>
         {% else %}
+            
             <strong>There are no categories present.</strong>
         {% endif %}
         </div>
@@ -32,7 +34,7 @@
             <ul>
             {% for page in pages %}
                 <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                
+
             {% endfor %}
             </ul>
         {% else %}
