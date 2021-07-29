@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-{% load staticfiles %}
+
 
 <html>
     <head>
@@ -9,15 +9,14 @@
 
     <body>
         <div>
-
+           
         {% if category %}
             <h1>{{ category.name }}</h1>
             {% if pages %}
             <u1>
                 {% for page in pages %}
-                <li>
-                    <a href="{{ page.url }}">{{ page.title }}</a>
-                </li>
+            
+                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
                 {% endfor %}
             </u1>
             {% else %}
@@ -28,5 +27,6 @@
         {% endif %}
 
         </div>
+        <a href="/rango/">Index</a>
     </body>
 </html>
